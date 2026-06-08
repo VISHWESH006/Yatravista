@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chat | The Yatra Vista</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: '#2ccce4', dark: '#222222' } } } }
+    </script>
+</head>
+
+<body class="bg-gray-50 flex items-center justify-center min-h-screen p-4 font-sans">
+
+    <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-200 max-w-sm w-full text-center">
+        <div class="w-16 h-16 bg-[#25d366]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fab fa-whatsapp text-[#25d366] text-3xl"></i>
+        </div>
+
+        <h2 class="text-lg font-bold text-dark mb-6">Send us a message</h2>
+
+        <!-- Visible Message Box -->
+        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 text-left mb-6">
+            <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">Your Message:</p>
+            <p id="msg-text" class="text-sm text-gray-700 italic">"Hello, I am interested in booking a trek with The
+                Yatra Vista. Could you please provide more details?"</p>
+        </div>
+
+        <button onclick="sendToWhatsApp()"
+            class="w-full bg-[#25d366] text-white font-bold py-3 rounded-sm hover:bg-[#128c7e] transition flex items-center justify-center uppercase text-sm tracking-widest">
+            <i class="fab fa-whatsapp mr-2 text-lg"></i> Send via WhatsApp
+        </button>
+
+        <a href="javascript:history.back()"
+            class="block mt-6 text-[11px] text-gray-400 uppercase tracking-widest hover:text-dark transition">Go
+            back</a>
+    </div>
+
+    <script>
+        function sendToWhatsApp() {
+            const phoneNumber = "917505425149";
+            const message = document.getElementById('msg-text').innerText.replace(/"/g, '');
+            const encodedMessage = encodeURIComponent(message);
+            window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        }
+    </script>
+</body>
+
+</html>
