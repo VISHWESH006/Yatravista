@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valley Of Flowers Trek | The Yatra Vista</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#2ccce4',
+                        branddark: '#20adc2',
+                        topbar: '#222222',
+                        darktext: '#333333',
+                        cardtheme: '#0d3c45',
+                        cardbtntext: '#facc15'
+                    },
+                    fontFamily: { sans: ['Roboto', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-[#555555] bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Topbar -->
+    <div class="bg-topbar text-[#aaaaaa] text-[13px] py-2.5 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span><i class="fas fa-envelope text-brand mr-2"></i> theyatravista@gmail.com</span>
+                <span><i class="fas fa-phone-alt text-brand mr-2"></i> +91 75054 25149 / 86500 72574</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://instagram.com/theyatravista" target="_blank" class="hover:text-brand transition flex items-center gap-1.5"><i class="fab fa-instagram"></i> <span class="text-[12px]">@theyatravista</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0">
+                    <img class="h-14 w-auto object-contain bg-cardtheme px-3 py-2 rounded-xl" src="BG_removed_logo.PNG" alt="The Yatra Vista">
+                </a>
+                <div class="hidden md:flex space-x-7 items-center font-bold text-darktext uppercase text-[13px] tracking-wide">
+                    <a href="index.html" class="hover:text-brand transition">Home</a>
+                    <a href="treks.html" class="text-brand">Treks</a>
+                    <a href="about.html" class="hover:text-brand transition">About Us</a>
+                    <a href="contact.html" class="hover:text-brand transition">Contact</a>
+                    <a href="contact.html" class="bg-brand text-white px-6 py-3 hover:bg-branddark transition rounded-sm">Book Now</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full z-50 shadow-lg">
+            <div class="px-4 py-4 flex flex-col space-y-4 uppercase text-sm font-bold text-darktext">
+                <a href="index.html" class="hover:text-brand">Home</a>
+                <a href="treks.html" class="text-brand">Treks</a>
+                <a href="about.html" class="hover:text-brand">About Us</a>
+                <a href="contact.html" class="hover:text-brand">Contact</a>
+                <a href="contact.html" class="bg-brand text-white px-4 py-2 text-center rounded-sm hover:bg-branddark">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="relative h-[380px] flex items-center justify-center">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80"
+            alt="Valley of Flowers" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <p class="text-brand text-[12px] uppercase tracking-[0.3em] font-bold mb-3">Uttarakhand | UNESCO Heritage</p>
+            <h1 class="text-[34px] md:text-[48px] font-black text-white uppercase tracking-wider mb-3">Valley Of Flowers</h1>
+            <p class="text-brand text-[14px] font-bold uppercase tracking-widest">With Hemkund Sahib</p>
+            <div class="flex flex-wrap justify-center gap-4 mt-6">
+                <span class="bg-white/20 backdrop-blur-sm text-white text-[12px] font-bold px-4 py-2 rounded-full border border-white/30">
+                    <i class="fas fa-clock mr-1"></i> 6 Days / 5 Nights
+                </span>
+                <span class="bg-white/20 backdrop-blur-sm text-white text-[12px] font-bold px-4 py-2 rounded-full border border-white/30">
+                    <i class="fas fa-mountain mr-1"></i> 14,400 Ft
+                </span>
+                <span class="bg-white/20 backdrop-blur-sm text-white text-[12px] font-bold px-4 py-2 rounded-full border border-white/30">
+                    <i class="fas fa-shoe-prints mr-1"></i> Moderate
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 border-b border-gray-200 py-3 px-4">
+        <div class="max-w-7xl mx-auto text-[13px] text-gray-500">
+            <a href="index.html" class="hover:text-brand transition">Home</a>
+            <i class="fas fa-angle-right mx-2 text-brand text-[10px]"></i>
+            <a href="treks.html" class="hover:text-brand transition">Treks</a>
+            <i class="fas fa-angle-right mx-2 text-brand text-[10px]"></i>
+            <span class="text-darktext font-medium">Valley of Flowers</span>
+        </div>
+    </div>
+
+    <main class="flex-grow py-12 px-4 max-w-7xl mx-auto w-full">
+        <div class="flex flex-col lg:flex-row gap-8">
+
+            <!-- Sidebar -->
+            <div class="lg:w-1/4">
+
+                <!-- Pricing Box -->
+                <div class="bg-cardtheme text-white border border-cardtheme p-6 mb-6 rounded-xl shadow-lg text-center sticky top-28">
+                    <h3 class="text-lg font-bold uppercase mb-5 text-brand border-b border-white/10 pb-4">Package Cost</h3>
+                    <div class="mb-4 border-b border-white/10 pb-4">
+                        <span class="block text-[12px] text-gray-400 uppercase tracking-widest mb-1">Rishikesh to Rishikesh</span>
+                        <span class="text-3xl font-black text-white">₹6,999</span>
+                        <span class="text-sm font-normal text-gray-400 ml-1">/ Person</span>
+                    </div>
+                    <div class="mb-4 border-b border-white/10 pb-4">
+                        <span class="block text-[12px] text-gray-400 uppercase tracking-widest mb-1">Delhi to Delhi</span>
+                        <span class="text-3xl font-black text-white">₹7,999</span>
+                        <span class="text-sm font-normal text-gray-400 ml-1">/ Person</span>
+                    </div>
+                    <p class="text-[11px] text-gray-400 mb-5">* ₹1000 extra per person for dual sharing upgrade</p>
+                    <a href="contact.html" class="block w-full bg-brand text-white font-bold uppercase text-[14px] py-4 hover:bg-branddark transition shadow-sm rounded-lg mb-3">
+                        <i class="fas fa-calendar-check mr-2"></i> Book Now
+                    </a>
+                    <a href="contact.html" class="block w-full bg-white/10 text-white font-bold uppercase text-[13px] py-3 hover:bg-white/20 transition rounded-lg border border-white/20">
+                        <i class="fas fa-phone-alt mr-2"></i> Call Us
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Main Content -->
+            <div class="lg:w-3/4 space-y-8">
+
+                <!-- Quick Info Bar -->
+                <div class="bg-white border border-[#e5e5e5] rounded-xl p-6 shadow-sm">
+                    <div class="flex flex-wrap gap-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-brand/10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-clock text-brand text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block text-[11px] text-gray-400 uppercase tracking-wide">Duration</span>
+                                <span class="font-bold text-darktext text-[15px]">6D / 5N</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-brand/10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-mountain text-brand text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block text-[11px] text-gray-400 uppercase tracking-wide">Altitude</span>
+                                <span class="font-bold text-darktext text-[15px]">14,400 Ft</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-brand/10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-shoe-prints text-brand text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block text-[11px] text-gray-400 uppercase tracking-wide">Difficulty</span>
+                                <span class="font-bold text-darktext text-[15px]">Moderate</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-brand/10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-brand text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block text-[11px] text-gray-400 uppercase tracking-wide">Pickup</span>
+                                <span class="font-bold text-darktext text-[15px]">Rishikesh / Delhi</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-brand/10 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-calendar text-brand text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block text-[11px] text-gray-400 uppercase tracking-wide">Best Time</span>
+                                <span class="font-bold text-darktext text-[15px]">Jul – Sep</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Itinerary -->
+                <div class="bg-white border border-[#e5e5e5] rounded-xl p-8 shadow-sm">
+                    <h2 class="text-[22px] font-bold text-darktext uppercase mb-8 flex items-center gap-3">
+                        <span class="w-1 h-7 bg-brand inline-block rounded"></span> Day-Wise Itinerary
+                    </h2>
+
+                    <div class="space-y-0">
+
+                        <div class="relative pl-8 pb-8 border-l-2 border-gray-100 ml-4">
+                            <div class="absolute -left-3 top-0 w-6 h-6 bg-brand rounded-full flex items-center justify-center text-white text-[11px] font-bold">1</div>
+                            <div class="bg-gray-50 rounded-xl p-5">
+                                <h3 class="text-[15px] font-bold text-brand uppercase mb-2">Day 1: Rishikesh to Govindghat</h3>
+                                <p class="text-[#555555] text-[14px] leading-relaxed mb-3">Your journey begins with an early morning departure from Rishikesh, driving alongside the scenic Alaknanda River. Passing through Devprayag, Rudraprayag, and Joshimath, the changing landscapes make the long drive truly mesmerizing. Arrive at Govindghat by evening.</p>
+                                <div class="text-[12px] font-bold text-darktext bg-white p-2.5 border border-[#e5e5e5] inline-block rounded-lg">
+                                    <i class="fas fa-bed text-brand mr-1"></i> Stay: Hotel in Govindghat &nbsp;|&nbsp; <i class="fas fa-utensils text-brand mr-1"></i> Meals: Dinner
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-8 pb-8 border-l-2 border-gray-100 ml-4">
+                            <div class="absolute -left-3 top-0 w-6 h-6 bg-brand rounded-full flex items-center justify-center text-white text-[11px] font-bold">2</div>
+                            <div class="bg-gray-50 rounded-xl p-5">
+                                <h3 class="text-[15px] font-bold text-brand uppercase mb-2">Day 2: Govindghat to Pulna to Ghangaria</h3>
+                                <p class="text-[#555555] text-[14px] leading-relaxed mb-3">After breakfast, take a short jeep ride to Pulna, the starting point of your trek. From here, begin your ascent through lush forests, walking alongside the beautiful Pushpawati River. Reach Ghangaria, a peaceful mountain village, by evening.</p>
+                                <div class="text-[12px] font-bold text-darktext bg-white p-2.5 border border-[#e5e5e5] inline-block rounded-lg">
+                                    <i class="fas fa-bed text-brand mr-1"></i> Stay: Hotel / Homestay &nbsp;|&nbsp; <i class="fas fa-utensils text-brand mr-1"></i> Meals: Breakfast, Lunch & Dinner
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-8 pb-8 border-l-2 border-gray-100 ml-4">
+                            <div class="absolute -left-3 top-0 w-6 h-6 bg-brand rounded-full flex items-center justify-center text-white text-[11px] font-bold">3</div>
+                            <div class="bg-gray-50 rounded-xl p-5">
+                                <h3 class="text-[15px] font-bold text-brand uppercase mb-2">Day 3: Ghangaria to Valley of Flowers and Back</h3>
+                                <p class="text-[#555555] text-[14px] leading-relaxed mb-3">Explore the magical Valley of Flowers, a UNESCO World Heritage Site known for its vibrant alpine blooms. The trek is around 8 km one way, taking you through a colorful landscape filled with rare flowers like Blue Poppy, Cobra Lily, and orchids.</p>
+                                <div class="text-[12px] font-bold text-darktext bg-white p-2.5 border border-[#e5e5e5] inline-block rounded-lg">
+                                    <i class="fas fa-bed text-brand mr-1"></i> Stay: Hotel / Homestay &nbsp;|&nbsp; <i class="fas fa-utensils text-brand mr-1"></i> Meals: Breakfast, Lunch & Dinner
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-8 pb-8 border-l-2 border-gray-100 ml-4">
+                            <div class="absolute -left-3 top-0 w-6 h-6 bg-brand rounded-full flex items-center justify-center text-white text-[11px] font-bold">4</div>
+                            <div class="bg-gray-50 rounded-xl p-5">
+                                <h3 class="text-[15px] font-bold text-brand uppercase mb-2">Day 4: Ghangaria to Hemkund Sahib and Back</h3>
+                                <p class="text-[#555555] text-[14px] leading-relaxed mb-3">Early in the morning, begin a steep yet rewarding trek towards Hemkund Sahib, covering approximately 6 km one way. Climb higher until you reach the sacred Gurudwara beside a serene glacial lake.</p>
+                                <div class="text-[12px] font-bold text-darktext bg-white p-2.5 border border-[#e5e5e5] inline-block rounded-lg">
+                                    <i class="fas fa-bed text-brand mr-1"></i> Stay: Hotel / Homestay &nbsp;|&nbsp; <i class="fas fa-utensils text-brand mr-1"></i> Meals: Breakfast, Lunch & Dinner
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-8 pb-8 border-l-2 border-gray-100 ml-4">
+                            <div class="absolute -left-3 top-0 w-6 h-6 bg-brand rounded-full flex items-center justify-center text-white text-[11px] font-bold">5</div>
+                            <div class="bg-gray-50 rounded-xl p-5">
+                                <h3 class="text-[15px] font-bold text-brand uppercase mb-2">Day 5: Ghangaria to Govindghat</h3>
+                                <p class="text-[#555555] text-[14px] leading-relaxed mb-3">After breakfast, begin your descent towards Pulna, covering around 9-10 km downhill. From Pulna, take a jeep back to Govindghat, check into your hotel and relax after completing the trek.</p>
+                                <div class="text-[12px] font-bold text-darktext bg-white p-2.5 border border-[#e5e5e5] inline-block rounded-lg">
+                                    <i class="fas fa-bed text-brand mr-1"></i> Stay: Hotel in Govindghat &nbsp;|&nbsp; <i class="fas fa-utensils text-brand mr-1"></i> Meals: Breakfast, Lunch & Dinner
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative pl-8 pb-0 ml-4">
+                            <div class="absolute -left-3 top-0 w-6 h-6 bg-brand rounded-full flex items-center justify-center text-white text-[11px] font-bold">6</div>
+                            <div class="bg-gray-50 rounded-xl p-5">
+                                <h3 class="text-[15px] font-bold text-brand uppercase mb-2">Day 6: Govindghat to Rishikesh</h3>
+                                <p class="text-[#555555] text-[14px] leading-relaxed mb-3">On the final day, after breakfast, begin your return journey to Rishikesh, retracing the scenic mountain route. The drive takes approximately 10-11 hours, bringing your journey to a close.</p>
+                                <div class="text-[12px] font-bold text-darktext bg-white p-2.5 border border-[#e5e5e5] inline-block rounded-lg">
+                                    <i class="fas fa-utensils text-brand mr-1"></i> Meals: Breakfast
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Inclusions & Exclusions -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white border border-[#e5e5e5] p-7 shadow-sm rounded-xl">
+                        <h3 class="text-[17px] font-bold text-darktext uppercase mb-5 flex items-center gap-2">
+                            <i class="fas fa-check-circle text-green-500"></i> Inclusions
+                        </h3>
+                        <ul class="space-y-3 text-[14px] text-[#555555]">
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i> Comfortable hotel / homestay (sharing basis)</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i> Meals during trek (Breakfast, Lunch, Dinner)</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i> Experienced trek leader & guide</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i> Transportation (Rishikesh - Govindghat)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white border border-[#e5e5e5] p-7 shadow-sm rounded-xl">
+                        <h3 class="text-[17px] font-bold text-darktext uppercase mb-5 flex items-center gap-2">
+                            <i class="fas fa-times-circle text-red-500"></i> Exclusions
+                        </h3>
+                        <ul class="space-y-3 text-[14px] text-[#555555]">
+                            <li class="flex items-start gap-3"><i class="fas fa-times text-red-500 mt-1 flex-shrink-0"></i> Valley of Flowers entry permit / forest fee</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-times text-red-500 mt-1 flex-shrink-0"></i> Jeep charges (Govindghat - Pulna)</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-times text-red-500 mt-1 flex-shrink-0"></i> Personal expenses & Travel insurance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="bg-cardtheme rounded-xl p-8 text-center">
+                    <h3 class="text-[22px] font-bold text-white mb-3">Ready for Valley of Flowers?</h3>
+                    <p class="text-gray-400 text-[14px] mb-6">Book now and secure your spot. Advance booking of ₹2000 per person confirms your trip.</p>
+                    <a href="contact.html" class="bg-brand text-white px-10 py-4 font-bold uppercase hover:bg-branddark transition rounded-lg inline-block text-sm tracking-wide">
+                        <i class="fas fa-calendar-check mr-2"></i> Book This Trek
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Full Footer -->
+    <footer class="bg-topbar text-[#aaaaaa] pt-16 pb-8 border-t-[4px] border-brand mt-auto">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 mb-8">
+            <div>
+                <img src="BG_removed_logo.PNG" alt="The Yatra Vista" class="h-16 mb-5 bg-white/10 p-1.5 rounded-sm">
+                <p class="text-[14px] mb-4 leading-relaxed">We specialize in creating fully customized travel packages tailored to your budget, group size, and preferred destinations.</p>
+                <p class="text-[13px] font-bold text-white tracking-widest uppercase">UDYAM-UK-13-0010463</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wide mb-5 text-[16px]">Quick Links</h4>
+                <div class="w-10 h-[2px] bg-brand mb-5"></div>
+                <ul class="space-y-3 text-[14px]">
+                    <li><a href="about.html" class="hover:text-brand transition"><i class="fas fa-angle-right text-brand mr-2"></i> About Us</a></li>
+                    <li><a href="treks.html" class="hover:text-brand transition"><i class="fas fa-angle-right text-brand mr-2"></i> All Treks</a></li>
+                    <li><a href="contact.html" class="hover:text-brand transition"><i class="fas fa-angle-right text-brand mr-2"></i> Contact Us</a></li>
+                    <li><a href="policies.html" class="hover:text-brand transition"><i class="fas fa-angle-right text-brand mr-2"></i> Policies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wide mb-5 text-[16px]">Contact Info</h4>
+                <div class="w-10 h-[2px] bg-brand mb-5"></div>
+                <ul class="space-y-4 text-[14px]">
+                    <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-brand text-lg mt-0.5"></i><span>Tiloth Rana Bhawan, Uttarkashi, Uttarakhand, 249193</span></li>
+                    <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-brand text-lg"></i><span>75054 25149 / 86500 72574</span></li>
+                    <li class="flex items-center gap-3"><i class="fas fa-envelope text-brand text-lg"></i><span>theyatravista@gmail.com</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 border-t border-[#333333] pt-6 text-center text-[13px]">
+            &copy; 2026 The Yatra Vista. All rights reserved. | <a href="policies.html" class="hover:text-brand">Policies</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    </script>
+</body>
+
+</html>

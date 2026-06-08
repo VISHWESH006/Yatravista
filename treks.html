@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treks | The Yatra Vista</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#2ccce4',
+                        branddark: '#20adc2',
+                        topbar: '#222222',
+                        darktext: '#333333',
+                        cardtheme: '#0d3c45',
+                        cardbtntext: '#facc15'
+                    },
+                    fontFamily: { sans: ['Roboto', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .trek-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .trek-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .trek-card.hidden-card {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-[#555555] bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Topbar -->
+    <div class="bg-topbar text-[#aaaaaa] text-[13px] py-2.5 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span><i class="fas fa-envelope text-brand mr-2"></i> theyatravista@gmail.com</span>
+                <span><i class="fas fa-phone-alt text-brand mr-2"></i> +91 75054 25149 / 86500 72574</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://instagram.com/theyatravista" target="_blank" class="hover:text-brand transition flex items-center gap-1.5"><i class="fab fa-instagram"></i> <span class="text-[12px]">@theyatravista</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0">
+                    <img class="h-14 w-auto object-contain bg-cardtheme px-3 py-2 rounded-xl" src="BG_removed_logo.PNG"
+                        alt="The Yatra Vista">
+                </a>
+                <div
+                    class="hidden md:flex space-x-7 items-center font-bold text-darktext uppercase text-[13px] tracking-wide">
+                    <a href="index.html" class="hover:text-brand transition">Home</a>
+                    <a href="treks.html" class="text-brand">Treks</a>
+                    <a href="about.html" class="hover:text-brand transition">About Us</a>
+                    <a href="contact.html" class="hover:text-brand transition">Contact</a>
+                    <a href="contact.html"
+                        class="bg-brand text-white px-6 py-3 hover:bg-branddark transition rounded-sm">Book Now</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full z-50 shadow-lg">
+            <div class="px-4 py-4 flex flex-col space-y-4 uppercase text-sm font-bold text-darktext">
+                <a href="index.html" class="hover:text-brand">Home</a>
+                <a href="treks.html" class="text-brand">Treks</a>
+                <a href="about.html" class="hover:text-brand">About Us</a>
+                <a href="contact.html" class="hover:text-brand">Contact</a>
+                <a href="contact.html"
+                    class="bg-brand text-white px-4 py-2 text-center rounded-sm hover:bg-branddark">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Banner -->
+    <div class="bg-topbar py-14 relative border-b-[3px] border-brand overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80"
+                class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <p class="text-brand text-[12px] uppercase tracking-[0.2em] font-bold mb-2">Explore Our Collection</p>
+            <h1 class="text-[36px] font-black text-white uppercase tracking-wide">Treks in India</h1>
+            <p class="text-[#aaaaaa] mt-2 text-[13px] font-medium">
+                <a href="index.html" class="hover:text-brand transition">Home</a>
+                <i class="fas fa-angle-right mx-2 text-brand"></i> Treks
+            </p>
+        </div>
+    </div>
+
+    <main class="flex-grow py-12 px-4 max-w-7xl mx-auto w-full">
+        <div class="flex flex-col lg:flex-row gap-8">
+
+            <!-- Sidebar -->
+            <div class="lg:w-1/4">
+                <div class="bg-white border border-[#e5e5e5] p-6 mb-6 rounded-xl shadow-sm sticky top-28">
+                    <h3 class="text-[18px] font-bold text-darktext uppercase mb-6 flex items-center">
+                        <span class="w-1 h-[22px] bg-brand mr-3 inline-block rounded"></span> FIND TREKS
+                    </h3>
+
+                    <div class="mb-5">
+                        <label
+                            class="block text-[13px] font-bold text-[#444444] uppercase mb-2 tracking-wide">Duration</label>
+                        <select id="filter-duration"
+                            class="w-full border border-brand p-2.5 text-[#555555] text-[14px] outline-none bg-white rounded-lg focus:ring-2 focus:ring-brand/30">
+                            <option value="all">Any Duration</option>
+                            <option value="1-3">1–3 Days</option>
+                            <option value="4-6">4–6 Days</option>
+                            <option value="7+">7+ Days</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-5">
+                        <label
+                            class="block text-[13px] font-bold text-[#444444] uppercase mb-2 tracking-wide">Difficulty</label>
+                        <select id="filter-difficulty"
+                            class="w-full border border-[#cccccc] p-2.5 text-[#555555] text-[14px] outline-none bg-white rounded-lg focus:border-brand focus:ring-2 focus:ring-brand/30">
+                            <option value="all">Any Difficulty</option>
+                            <option value="easy">Easy</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="difficult">Difficult</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-[13px] font-bold text-[#444444] uppercase mb-2 tracking-wide">Sort
+                            By</label>
+                        <select id="sort-by"
+                            class="w-full border border-[#cccccc] p-2.5 text-[#555555] text-[14px] outline-none bg-white rounded-lg focus:border-brand focus:ring-2 focus:ring-brand/30">
+                            <option value="default">Default</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="duration-asc">Duration: Short First</option>
+                            <option value="duration-desc">Duration: Long First</option>
+                        </select>
+                    </div>
+
+                    <button id="apply-filters"
+                        class="w-full bg-brand text-white font-bold uppercase text-[14px] py-3.5 hover:bg-branddark transition rounded-lg shadow-sm mb-3">
+                        <i class="fas fa-search mr-2"></i> SEARCH TREKS
+                    </button>
+                    <button id="reset-filters"
+                        class="w-full bg-gray-100 text-gray-500 font-bold uppercase text-[13px] py-2.5 hover:bg-gray-200 transition rounded-lg">
+                        Reset Filters
+                    </button>
+                </div>
+
+                <!-- Results count -->
+                <div class="bg-brand/10 border border-brand/20 rounded-xl p-4 text-center">
+                    <span id="results-count" class="text-brand font-bold text-[15px]">4</span>
+                    <span class="text-darktext text-[13px] font-medium"> treks found</span>
+                </div>
+            </div>
+
+            <!-- Treks List -->
+            <div class="lg:w-3/4">
+
+                <!-- Sort/Results bar -->
+                <div
+                    class="flex justify-between items-center mb-6 bg-white border border-gray-200 rounded-xl px-5 py-3">
+                    <p class="text-[14px] text-gray-500">Showing <span id="showing-count"
+                            class="font-bold text-darktext">4</span> treks</p>
+                    <div class="flex items-center gap-2 text-[13px] text-gray-500">
+                        <i class="fas fa-sort-amount-down text-brand"></i>
+                        <span>Sort via sidebar</span>
+                    </div>
+                </div>
+
+                <div id="treks-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- Card: Hampta Pass -->
+                    <div class="trek-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-xl flex flex-col"
+                        data-duration="4-6" data-difficulty="moderate" data-price="5500" data-days="5">
+                        <div class="relative h-[220px] overflow-hidden">
+                            <a href="hampta-pass.html">
+                                <img src="src/hampta-pass.jpg"
+                                    alt="Hampta Pass"
+                                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </a>
+                            <div
+                                class="absolute top-3 left-3 bg-brand text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase">
+                                Popular</div>
+                            <div
+                                class="absolute top-3 right-3 bg-black/60 text-white text-[12px] font-bold px-3 py-1 rounded-full">
+                                5D/4N</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-[20px] font-bold text-cardtheme mb-2 hover:text-brand transition">
+                                <a href="hampta-pass.html">Hampta Pass Trek</a>
+                            </h3>
+                            <p class="text-[14px] text-gray-500 leading-relaxed mb-5 line-clamp-2">Experience the
+                                breathtaking transition to Spiti Valley and visit the mesmerizing Chandratal Lake.</p>
+
+                            <div class="grid grid-cols-2 gap-3 mb-5 flex-grow">
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-shoe-prints text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Difficulty</span>
+                                    <span class="text-[13px] font-bold text-darktext">Moderate</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-mountain text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Altitude</span>
+                                    <span class="text-[13px] font-bold text-darktext">14,100 Ft</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-calendar text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Best Time</span>
+                                    <span class="text-[13px] font-bold text-darktext">May–Oct</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-map-marker-alt text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Start</span>
+                                    <span class="text-[13px] font-bold text-darktext">Manali</span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="border-t border-dashed border-gray-200 pt-4 flex justify-between items-center mb-4">
+                                <span class="text-gray-500 text-[13px]">Starting from</span>
+                                <span class="text-[22px] font-black text-cardtheme">₹5,500 <span
+                                        class="text-[13px] text-gray-400 font-normal">/person</span></span>
+                            </div>
+                            <a href="hampta-pass.html"
+                                class="block w-full text-center bg-cardtheme text-cardbtntext py-3.5 rounded-lg font-bold text-[15px] hover:bg-[#092a30] transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card: Madhmaheshwar -->
+                    <div class="trek-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-xl flex flex-col"
+                        data-duration="1-3" data-difficulty="moderate" data-price="5999" data-days="3">
+                        <div class="relative h-[220px] overflow-hidden">
+                            <a href="madhmaheshwar.html">
+                                <img src="src/Madhmaheshwar.jpg"
+                                    alt="Madhmaheshwar"
+                                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </a>
+                            <div
+                                class="absolute top-3 left-3 bg-purple-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase">
+                                Spiritual</div>
+                            <div
+                                class="absolute top-3 right-3 bg-black/60 text-white text-[12px] font-bold px-3 py-1 rounded-full">
+                                3D/2N</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-[20px] font-bold text-cardtheme mb-2 hover:text-brand transition">
+                                <a href="madhmaheshwar.html">Madhmaheshwar Trek</a>
+                            </h3>
+                            <p class="text-[14px] text-gray-500 leading-relaxed mb-5 line-clamp-2">A sacred pilgrimage
+                                trek to one of the revered Panch Kedar temples nestled in the Garhwal Himalayas.</p>
+
+                            <div class="grid grid-cols-2 gap-3 mb-5 flex-grow">
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-shoe-prints text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Difficulty</span>
+                                    <span class="text-[13px] font-bold text-darktext">Moderate</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-mountain text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Altitude</span>
+                                    <span class="text-[13px] font-bold text-darktext">11,450 Ft</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-calendar text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Best Time</span>
+                                    <span class="text-[13px] font-bold text-darktext">May–Oct</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-map-marker-alt text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Start</span>
+                                    <span class="text-[13px] font-bold text-darktext">Delhi/Rishikesh</span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="border-t border-dashed border-gray-200 pt-4 flex justify-between items-center mb-4">
+                                <span class="text-gray-500 text-[13px]">Starting from</span>
+                                <span class="text-[22px] font-black text-cardtheme">₹5,999 <span
+                                        class="text-[13px] text-gray-400 font-normal">/person</span></span>
+                            </div>
+                            <a href="madhmaheshwar.html"
+                                class="block w-full text-center bg-cardtheme text-cardbtntext py-3.5 rounded-lg font-bold text-[15px] hover:bg-[#092a30] transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card: Valley of Flowers -->
+                    <div class="trek-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-xl flex flex-col"
+                        data-duration="4-6" data-difficulty="moderate" data-price="6999" data-days="6">
+                        <div class="relative h-[220px] overflow-hidden">
+                            <a href="valley-of-flowers.html">
+                                <img src="src/Valley of Flowers.webp"
+                                    alt="Valley of Flowers"
+                                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </a>
+                            <div
+                                class="absolute top-3 left-3 bg-green-500 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase">
+                                UNESCO Site</div>
+                            <div
+                                class="absolute top-3 right-3 bg-black/60 text-white text-[12px] font-bold px-3 py-1 rounded-full">
+                                6D/5N</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-[20px] font-bold text-cardtheme mb-2 hover:text-brand transition">
+                                <a href="valley-of-flowers.html">Valley Of Flowers</a>
+                            </h3>
+                            <p class="text-[14px] text-gray-500 leading-relaxed mb-5 line-clamp-2">Sacred pilgrimage
+                                trek combining the vibrant alpine blooms and Hemkund Sahib.</p>
+
+                            <div class="grid grid-cols-2 gap-3 mb-5 flex-grow">
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-shoe-prints text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Difficulty</span>
+                                    <span class="text-[13px] font-bold text-darktext">Moderate</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-mountain text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Altitude</span>
+                                    <span class="text-[13px] font-bold text-darktext">14,400 Ft</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-calendar text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Best Time</span>
+                                    <span class="text-[13px] font-bold text-darktext">Jul–Sep</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-map-marker-alt text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Start</span>
+                                    <span class="text-[13px] font-bold text-darktext">Rishikesh</span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="border-t border-dashed border-gray-200 pt-4 flex justify-between items-center mb-4">
+                                <span class="text-gray-500 text-[13px]">Starting from</span>
+                                <span class="text-[22px] font-black text-cardtheme">₹6,999 <span
+                                        class="text-[13px] text-gray-400 font-normal">/person</span></span>
+                            </div>
+                            <a href="valley-of-flowers.html"
+                                class="block w-full text-center bg-cardtheme text-cardbtntext py-3.5 rounded-lg font-bold text-[15px] hover:bg-[#092a30] transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card: Yulla Kanda -->
+                    <div class="trek-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-xl flex flex-col"
+                        data-duration="1-3" data-difficulty="moderate" data-price="7999" data-days="3">
+                        <div class="relative h-[220px] overflow-hidden">
+                            <a href="yulla-kanda.html">
+                                <img src="src/Yulla Kanda.webp"
+                                    alt="Yulla Kanda"
+                                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </a>
+                            <div
+                                class="absolute top-3 left-3 bg-yellow-500 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase">
+                                Hidden Gem</div>
+                            <div
+                                class="absolute top-3 right-3 bg-black/60 text-white text-[12px] font-bold px-3 py-1 rounded-full">
+                                3D/2N</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-[20px] font-bold text-cardtheme mb-2 hover:text-brand transition">
+                                <a href="yulla-kanda.html">Yulla Kanda Trek</a>
+                            </h3>
+                            <p class="text-[14px] text-gray-500 leading-relaxed mb-5 line-clamp-2">Ascend to the World's
+                                Highest Krishna Temple nestled in the breathtaking Kinnaur region.</p>
+
+                            <div class="grid grid-cols-2 gap-3 mb-5 flex-grow">
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-shoe-prints text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Difficulty</span>
+                                    <span class="text-[13px] font-bold text-darktext">Moderate</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-mountain text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Altitude</span>
+                                    <span class="text-[13px] font-bold text-darktext">12,778 Ft</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-calendar text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Best Time</span>
+                                    <span class="text-[13px] font-bold text-darktext">May–Oct</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3 text-center">
+                                    <i class="fas fa-map-marker-alt text-brand mb-1 block text-sm"></i>
+                                    <span class="text-[11px] text-gray-500 block">Start</span>
+                                    <span class="text-[13px] font-bold text-darktext">Delhi</span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="border-t border-dashed border-gray-200 pt-4 flex justify-between items-center mb-4">
+                                <span class="text-gray-500 text-[13px]">Starting from</span>
+                                <span class="text-[22px] font-black text-cardtheme">₹7,999 <span
+                                        class="text-[13px] text-gray-400 font-normal">/person</span></span>
+                            </div>
+                            <a href="yulla-kanda.html"
+                                class="block w-full text-center bg-cardtheme text-cardbtntext py-3.5 rounded-lg font-bold text-[15px] hover:bg-[#092a30] transition duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- No results message -->
+                <div id="no-results" class="hidden text-center py-20">
+                    <i class="fas fa-mountain text-gray-300 text-6xl mb-5"></i>
+                    <h3 class="text-[20px] font-bold text-gray-400 mb-2">No Treks Found</h3>
+                    <p class="text-gray-400 mb-6">Try adjusting your filters to find matching treks.</p>
+                    <button id="reset-filters-2"
+                        class="bg-brand text-white px-6 py-3 rounded-lg font-bold hover:bg-branddark transition">Reset
+                        Filters</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Full Footer -->
+    <footer class="bg-topbar text-[#aaaaaa] pt-16 pb-8 border-t-[4px] border-brand mt-auto">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 mb-8">
+            <div>
+                <img src="BG_removed_logo.PNG" alt="The Yatra Vista" class="h-16 mb-5 bg-white/10 p-1.5 rounded-sm">
+                <p class="text-[14px] mb-4 leading-relaxed">We specialize in creating fully customized travel packages
+                    tailored to your budget, group size, and preferred destinations.</p>
+                <p class="text-[13px] font-bold text-white tracking-widest uppercase">UDYAM-UK-13-0010463</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wide mb-5 text-[16px]">Quick Links</h4>
+                <div class="w-10 h-[2px] bg-brand mb-5"></div>
+                <ul class="space-y-3 text-[14px]">
+                    <li><a href="about.html" class="hover:text-brand transition"><i
+                                class="fas fa-angle-right text-brand mr-2"></i> About Us</a></li>
+                    <li><a href="treks.html" class="hover:text-brand transition"><i
+                                class="fas fa-angle-right text-brand mr-2"></i> All Treks</a></li>
+                    <li><a href="contact.html" class="hover:text-brand transition"><i
+                                class="fas fa-angle-right text-brand mr-2"></i> Contact Us</a></li>
+                    <li><a href="policies.html" class="hover:text-brand transition"><i
+                                class="fas fa-angle-right text-brand mr-2"></i> Policies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wide mb-5 text-[16px]">Contact Info</h4>
+                <div class="w-10 h-[2px] bg-brand mb-5"></div>
+                <ul class="space-y-4 text-[14px]">
+                    <li class="flex items-start gap-3"><i
+                            class="fas fa-map-marker-alt text-brand text-lg mt-0.5"></i><span>Tiloth Rana Bhawan,
+                            Uttarkashi, Uttarakhand, 249193</span></li>
+                    <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-brand text-lg"></i><span>75054
+                            25149 / 86500 72574</span></li>
+                    <li class="flex items-center gap-3"><i
+                            class="fas fa-envelope text-brand text-lg"></i><span>theyatravista@gmail.com</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 border-t border-[#333333] pt-6 text-center text-[13px]">
+            &copy; 2026 The Yatra Vista. All rights reserved. | <a href="policies.html"
+                class="hover:text-brand">Policies</a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Filter & Sort Logic
+        const cards = Array.from(document.querySelectorAll('.trek-card'));
+        const grid = document.getElementById('treks-grid');
+        const noResults = document.getElementById('no-results');
+        const resultsCount = document.getElementById('results-count');
+        const showingCount = document.getElementById('showing-count');
+
+        function applyFiltersAndSort() {
+            const duration = document.getElementById('filter-duration').value;
+            const difficulty = document.getElementById('filter-difficulty').value;
+            const sortBy = document.getElementById('sort-by').value;
+
+            // Filter
+            let visible = cards.filter(card => {
+                const matchDuration = duration === 'all' || card.dataset.duration === duration;
+                const matchDifficulty = difficulty === 'all' || card.dataset.difficulty === difficulty;
+                return matchDuration && matchDifficulty;
+            });
+
+            // Sort
+            visible.sort((a, b) => {
+                if (sortBy === 'price-asc') return parseInt(a.dataset.price) - parseInt(b.dataset.price);
+                if (sortBy === 'price-desc') return parseInt(b.dataset.price) - parseInt(a.dataset.price);
+                if (sortBy === 'duration-asc') return parseInt(a.dataset.days) - parseInt(b.dataset.days);
+                if (sortBy === 'duration-desc') return parseInt(b.dataset.days) - parseInt(a.dataset.days);
+                return 0;
+            });
+
+            // Hide all
+            cards.forEach(card => {
+                card.style.display = 'none';
+                card.style.order = '';
+            });
+
+            // Show visible in sorted order
+            visible.forEach((card, i) => {
+                card.style.display = 'flex';
+                card.style.order = i;
+            });
+
+            // Update counts
+            const count = visible.length;
+            resultsCount.textContent = count;
+            showingCount.textContent = count;
+
+            // No results
+            if (count === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        document.getElementById('apply-filters').addEventListener('click', applyFiltersAndSort);
+
+        // Live filter on change
+        ['filter-duration', 'filter-difficulty', 'sort-by'].forEach(id => {
+            document.getElementById(id).addEventListener('change', applyFiltersAndSort);
+        });
+
+        function resetFilters() {
+            document.getElementById('filter-duration').value = 'all';
+            document.getElementById('filter-difficulty').value = 'all';
+            document.getElementById('sort-by').value = 'default';
+            applyFiltersAndSort();
+        }
+
+        document.getElementById('reset-filters').addEventListener('click', resetFilters);
+        document.getElementById('reset-filters-2').addEventListener('click', resetFilters);
+    </script>
+</body>
+
+</html>

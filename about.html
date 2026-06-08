@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | The Yatra Vista</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#2ccce4',
+                        branddark: '#20adc2',
+                        topbar: '#222222',
+                        darktext: '#333333',
+                        cardtheme: '#0d3c45',
+                        cardbtntext: '#facc15'
+                    },
+                    fontFamily: { sans: ['Roboto', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-[#555555] bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Topbar -->
+    <div class="bg-topbar text-[#aaaaaa] text-[13px] py-2.5 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span><i class="fas fa-envelope text-brand mr-2"></i> theyatravista@gmail.com</span>
+                <span><i class="fas fa-phone-alt text-brand mr-2"></i> +91 75054 25149 / 86500 72574</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://instagram.com/theyatravista" target="_blank" class="hover:text-brand transition flex items-center gap-1.5"><i class="fab fa-instagram"></i> <span class="text-[12px]">@theyatravista</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0">
+                    <img class="h-14 w-auto object-contain bg-cardtheme px-3 py-2 rounded-xl" src="BG_removed_logo.PNG" alt="The Yatra Vista">
+                </a>
+                <div class="hidden md:flex space-x-7 items-center font-bold text-darktext uppercase text-[13px] tracking-wide">
+                    <a href="index.html" class="hover:text-brand transition">Home</a>
+                    <a href="treks.html" class="hover:text-brand transition">Treks</a>
+                    <a href="about.html" class="text-brand">About Us</a>
+                    <a href="contact.html" class="hover:text-brand transition">Contact</a>
+                    <a href="contact.html" class="bg-brand text-white px-6 py-3 hover:bg-branddark transition rounded-sm">Book Now</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full z-50 shadow-lg">
+            <div class="px-4 py-4 flex flex-col space-y-4 uppercase text-sm font-bold text-darktext">
+                <a href="index.html" class="hover:text-brand">Home</a>
+                <a href="treks.html" class="hover:text-brand">Treks</a>
+                <a href="about.html" class="text-brand">About Us</a>
+                <a href="contact.html" class="hover:text-brand">Contact</a>
+                <a href="contact.html" class="bg-brand text-white px-4 py-2 text-center rounded-sm hover:bg-branddark">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Banner -->
+    <div class="bg-topbar py-14 relative border-b-[3px] border-brand overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <p class="text-brand text-[12px] uppercase tracking-[0.2em] font-bold mb-2">Our Story</p>
+            <h1 class="text-[36px] font-black text-white uppercase tracking-wide">About Us</h1>
+            <p class="text-[#aaaaaa] mt-2 text-[13px] font-medium">
+                <a href="index.html" class="hover:text-brand transition">Home</a>
+                <i class="fas fa-angle-right mx-2 text-brand"></i> About
+            </p>
+        </div>
+    </div>
+
+    <main class="flex-grow py-16 px-4 max-w-6xl mx-auto w-full space-y-10">
+
+        <!-- Who We Are -->
+        <div class="bg-white border border-[#e5e5e5] p-8 rounded-xl shadow-sm">
+            <h2 class="text-[22px] font-bold text-darktext mb-5 uppercase flex items-center gap-3">
+                <span class="w-1 h-7 bg-brand inline-block rounded"></span> Who We Are
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-[#555555] mb-4 leading-relaxed text-[15px]">At The Yatra Vista, we believe that travel is not just about reaching a destination — it's about discovering experiences, creating memories, and exploring the extraordinary. We are a passionate travel company dedicated to curating unforgettable journeys across India, whether it's trekking through the mighty Himalayas, relaxing on pristine beaches, exploring vibrant cities, or embarking on thrilling adventure expeditions.</p>
+                    <p class="text-[#555555] leading-relaxed text-[15px]">From beginners seeking their first mountain adventure to seasoned travelers looking for unique experiences, we strive to make every trip seamless, safe, and memorable.</p>
+                    <p class="text-[13px] font-bold text-brand mt-4 italic">"Every journey begins with a destination. We make sure it becomes a story worth telling."</p>
+                    <div class="mt-6 flex flex-wrap gap-4">
+                        <div class="bg-brand/10 border border-brand/20 rounded-lg px-4 py-3 text-center min-w-[100px]">
+                            <div class="text-2xl font-black text-brand">500+</div>
+                            <div class="text-[11px] text-gray-500 uppercase tracking-wide">Trekkers</div>
+                        </div>
+                        <div class="bg-brand/10 border border-brand/20 rounded-lg px-4 py-3 text-center min-w-[100px]">
+                            <div class="text-2xl font-black text-brand">15+</div>
+                            <div class="text-[11px] text-gray-500 uppercase tracking-wide">Routes</div>
+                        </div>
+                        <div class="bg-brand/10 border border-brand/20 rounded-lg px-4 py-3 text-center min-w-[100px]">
+                            <div class="text-2xl font-black text-brand">5+</div>
+                            <div class="text-[11px] text-gray-500 uppercase tracking-wide">Years</div>
+                        </div>
+                        <div class="bg-brand/10 border border-brand/20 rounded-lg px-4 py-3 text-center min-w-[100px]">
+                            <div class="text-2xl font-black text-brand">100%</div>
+                            <div class="text-[11px] text-gray-500 uppercase tracking-wide">Safety Record</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden h-64 shadow-md">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80"
+                        alt="Trekking" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Goal -->
+        <div class="bg-white border border-[#e5e5e5] p-8 rounded-xl shadow-sm">
+            <h2 class="text-[22px] font-bold text-darktext mb-5 uppercase flex items-center gap-3">
+                <span class="w-1 h-7 bg-brand inline-block rounded"></span> Our Goal
+            </h2>
+            <div class="flex items-start gap-6">
+                <div class="w-16 h-16 bg-brand/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-bullseye text-brand text-2xl"></i>
+                </div>
+                <div>
+                    <p class="text-[#555555] leading-relaxed text-[15px] mb-4">Our goal is to make travel accessible, comfortable, and enriching for every traveler. We aim to connect people with nature, culture, adventure, and spirituality through well-planned journeys that create lifelong memories.</p>
+                    <p class="text-[#555555] leading-relaxed text-[15px]">We don't just organize trips — we create experiences that inspire people to explore more, travel responsibly, and discover the incredible beauty that India has to offer.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- What We Provide -->
+        <div class="bg-white border border-[#e5e5e5] p-8 rounded-xl shadow-sm">
+            <h2 class="text-[22px] font-bold text-darktext mb-2 uppercase flex items-center gap-3">
+                <span class="w-1 h-7 bg-brand inline-block rounded"></span> What We Provide
+            </h2>
+            <p class="text-gray-500 text-[14px] mb-8">A wide range of travel experiences across India — all under one roof.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Trekking Expeditions -->
+                <div class="border border-gray-100 rounded-xl p-6 bg-gray-50">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-12 h-12 bg-brand/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-mountain text-brand text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-darktext text-[17px] uppercase">Trekking Expeditions</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Kedarkantha Trek</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Hampta Pass Trek</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Valley of Flowers</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Kuari Pass Trek</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Brahmatal Trek</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Nag Tibba Trek</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Chopta Chandrashila</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Kashmir Great Lakes</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Rupin Pass Trek</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Sar Pass Trek</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Har Ki Dun Trek</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Tarsar Marsar Trek</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Dayara Bugyal Trek</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Sandakphu Trek</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Beas Kund Trek</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Buran Ghati Trek</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2 col-span-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Everest View Treks & many more</span>
+                    </div>
+                </div>
+
+                <!-- Adventure Trips -->
+                <div class="border border-gray-100 rounded-xl p-6 bg-gray-50">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-12 h-12 bg-brand/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-biking text-brand text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-darktext text-[17px] uppercase">Adventure Trips</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Camping Expeditions</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> River Rafting</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Paragliding Trips</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Bike Tours</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Jeep Safaris</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Snow Adventures</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Backpacking Expeditions</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Wildlife Experiences</span>
+                    </div>
+                </div>
+
+                <!-- Leisure & Holiday Packages -->
+                <div class="border border-gray-100 rounded-xl p-6 bg-gray-50">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-12 h-12 bg-brand/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-umbrella-beach text-brand text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-darktext text-[17px] uppercase">Leisure & Holiday Packages</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Himachal Pradesh Tours</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Kashmir Packages</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Uttarakhand Getaways</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Rajasthan Tours</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Goa Holidays</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Kerala Backwaters</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Northeast India Tours</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Andaman Trips</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Ladakh Road Trips</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Family Vacations</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Honeymoon Packages</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Weekend Escapes</span>
+                    </div>
+                </div>
+
+                <!-- Spiritual & Pilgrimage Tours -->
+                <div class="border border-gray-100 rounded-xl p-6 bg-gray-50">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-12 h-12 bg-brand/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-om text-brand text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-darktext text-[17px] uppercase">Spiritual & Pilgrimage Tours</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Char Dham Yatra</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Kedarnath Yatra</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Badrinath Yatra</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Hemkund Sahib</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Amarnath Yatra</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Vaishno Devi</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Jyotirlinga Tours</span>
+                        <span class="text-[13px] text-[#555555] flex items-center gap-2"><i class="fas fa-angle-right text-brand text-[10px]"></i> Religious Circuits</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Customized Travel Packages -->
+        <div class="bg-white border border-[#e5e5e5] p-8 rounded-xl shadow-sm">
+            <h2 class="text-[22px] font-bold text-darktext mb-2 uppercase flex items-center gap-3">
+                <span class="w-1 h-7 bg-brand inline-block rounded"></span> Customized Travel Packages
+            </h2>
+            <p class="text-gray-500 text-[14px] mb-8">Every traveler is different, and so is every journey. We specialize in creating fully customized travel packages tailored to you.</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-6">
+                <div class="bg-brand/5 border border-brand/15 rounded-xl p-4 text-center">
+                    <i class="fas fa-wallet text-brand text-2xl mb-2"></i>
+                    <p class="text-[13px] font-bold text-darktext">Budget</p>
+                </div>
+                <div class="bg-brand/5 border border-brand/15 rounded-xl p-4 text-center">
+                    <i class="fas fa-users text-brand text-2xl mb-2"></i>
+                    <p class="text-[13px] font-bold text-darktext">Group Size</p>
+                </div>
+                <div class="bg-brand/5 border border-brand/15 rounded-xl p-4 text-center">
+                    <i class="fas fa-suitcase text-brand text-2xl mb-2"></i>
+                    <p class="text-[13px] font-bold text-darktext">Travel Style</p>
+                </div>
+                <div class="bg-brand/5 border border-brand/15 rounded-xl p-4 text-center">
+                    <i class="fas fa-map-marker-alt text-brand text-2xl mb-2"></i>
+                    <p class="text-[13px] font-bold text-darktext">Destinations</p>
+                </div>
+                <div class="bg-brand/5 border border-brand/15 rounded-xl p-4 text-center">
+                    <i class="fas fa-bed text-brand text-2xl mb-2"></i>
+                    <p class="text-[13px] font-bold text-darktext">Accommodation</p>
+                </div>
+                <div class="bg-brand/5 border border-brand/15 rounded-xl p-4 text-center">
+                    <i class="fas fa-dumbbell text-brand text-2xl mb-2"></i>
+                    <p class="text-[13px] font-bold text-darktext">Adventure Level</p>
+                </div>
+                <div class="bg-brand/5 border border-brand/15 rounded-xl p-4 text-center">
+                    <i class="fas fa-clock text-brand text-2xl mb-2"></i>
+                    <p class="text-[13px] font-bold text-darktext">Duration</p>
+                </div>
+            </div>
+            <p class="text-[14px] text-[#555555] leading-relaxed">Whether you're planning a <strong>solo backpacking trip</strong>, a <strong>family vacation</strong>, a <strong>corporate outing</strong>, a <strong>college group tour</strong>, or a <strong>honeymoon</strong>, we design experiences that fit your needs perfectly.</p>
+        </div>
+
+        <!-- Deluxe to Premium Experiences -->
+        <div class="bg-white border border-[#e5e5e5] p-8 rounded-xl shadow-sm">
+            <h2 class="text-[22px] font-bold text-darktext mb-2 uppercase flex items-center gap-3">
+                <span class="w-1 h-7 bg-brand inline-block rounded"></span> Deluxe to Premium Experiences
+            </h2>
+            <p class="text-gray-500 text-[14px] mb-8">We understand that comfort matters. Our packages range from Deluxe to Premium, ensuring every traveler finds the right fit — with safety as the highest priority in every trip.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-4 border border-gray-100">
+                    <i class="fas fa-hotel text-brand text-xl flex-shrink-0"></i>
+                    <span class="text-[14px] text-darktext font-medium">Carefully Selected Hotels & Camps</span>
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-4 border border-gray-100">
+                    <i class="fas fa-bus text-brand text-xl flex-shrink-0"></i>
+                    <span class="text-[14px] text-darktext font-medium">Comfortable Transportation</span>
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-4 border border-gray-100">
+                    <i class="fas fa-user-tie text-brand text-xl flex-shrink-0"></i>
+                    <span class="text-[14px] text-darktext font-medium">Experienced Guides & Trip Leaders</span>
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-4 border border-gray-100">
+                    <i class="fas fa-utensils text-brand text-xl flex-shrink-0"></i>
+                    <span class="text-[14px] text-darktext font-medium">Quality Meals Included</span>
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-4 border border-gray-100">
+                    <i class="fas fa-hands-helping text-brand text-xl flex-shrink-0"></i>
+                    <span class="text-[14px] text-darktext font-medium">Local Support Teams</span>
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-4 border border-gray-100">
+                    <i class="fas fa-headset text-brand text-xl flex-shrink-0"></i>
+                    <span class="text-[14px] text-darktext font-medium">24×7 Assistance During Travel</span>
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-4 border border-gray-100 sm:col-span-2 md:col-span-1">
+                    <i class="fas fa-route text-brand text-xl flex-shrink-0"></i>
+                    <span class="text-[14px] text-darktext font-medium">Well-Planned Itineraries</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Trust Us -->
+        <div class="bg-white border border-[#e5e5e5] p-8 rounded-xl shadow-sm">
+            <h2 class="text-[22px] font-bold text-darktext mb-2 uppercase flex items-center gap-3">
+                <span class="w-1 h-7 bg-brand inline-block rounded"></span> Why Trust Us?
+            </h2>
+            <p class="text-gray-500 text-[14px] mb-8">Travel is about trust, and we work hard to earn it.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex items-start gap-5 p-5 bg-gray-50 rounded-xl hover:bg-brand/5 transition">
+                    <div class="w-14 h-14 bg-brand/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-shield-alt text-brand text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-darktext text-[16px] mb-2 uppercase">We Prioritize Safety</h4>
+                        <p class="text-[#666666] text-[14px] leading-relaxed">Every itinerary is designed with safety and comfort in mind. We work with trusted local partners, experienced guides, and verified accommodations.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-5 p-5 bg-gray-50 rounded-xl hover:bg-brand/5 transition">
+                    <div class="w-14 h-14 bg-brand/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-wallet text-brand text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-darktext text-[16px] mb-2 uppercase">Transparent Pricing</h4>
+                        <p class="text-[#666666] text-[14px] leading-relaxed">No hidden charges. No last-minute surprises. We believe in honest and transparent communication at every step.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-5 p-5 bg-gray-50 rounded-xl hover:bg-brand/5 transition">
+                    <div class="w-14 h-14 bg-brand/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-headset text-brand text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-darktext text-[16px] mb-2 uppercase">Dedicated Support</h4>
+                        <p class="text-[#666666] text-[14px] leading-relaxed">Our team remains available before, during, and after your trip to ensure a smooth and memorable travel experience.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-5 p-5 bg-gray-50 rounded-xl hover:bg-brand/5 transition">
+                    <div class="w-14 h-14 bg-brand/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-map text-brand text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-darktext text-[16px] mb-2 uppercase">Local Expertise</h4>
+                        <p class="text-[#666666] text-[14px] leading-relaxed">We collaborate with local communities and experts who know the destinations best, helping you experience places more authentically.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-5 p-5 bg-gray-50 rounded-xl hover:bg-brand/5 transition md:col-span-2">
+                    <div class="w-14 h-14 bg-brand/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-heart text-brand text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-darktext text-[16px] mb-2 uppercase">Customer-Centric Approach</h4>
+                        <p class="text-[#666666] text-[14px] leading-relaxed">Your satisfaction is our biggest achievement. Every trip is planned with meticulous attention to detail, ensuring every traveler feels valued, heard, and cared for throughout the journey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What Makes Us Different -->
+        <div class="bg-white border border-[#e5e5e5] p-8 rounded-xl shadow-sm">
+            <h2 class="text-[22px] font-bold text-darktext mb-2 uppercase flex items-center gap-3">
+                <span class="w-1 h-7 bg-brand inline-block rounded"></span> What Makes Us Different
+            </h2>
+            <p class="text-gray-500 text-[14px] mb-8">Many companies sell trips. We focus on creating experiences.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="border-l-4 border-brand pl-5 py-2">
+                    <h4 class="font-bold text-darktext text-[15px] uppercase mb-2">Personalized Travel Planning</h4>
+                    <p class="text-[#666666] text-[14px] leading-relaxed">We don't believe in one-size-fits-all itineraries. Every traveler gets a journey tailored to their unique preferences.</p>
+                </div>
+                <div class="border-l-4 border-brand pl-5 py-2">
+                    <h4 class="font-bold text-darktext text-[15px] uppercase mb-2">Diverse Travel Portfolio</h4>
+                    <p class="text-[#666666] text-[14px] leading-relaxed">From high-altitude Himalayan treks to luxurious leisure holidays, spiritual journeys, and adventure expeditions — all under one roof.</p>
+                </div>
+                <div class="border-l-4 border-brand pl-5 py-2">
+                    <h4 class="font-bold text-darktext text-[15px] uppercase mb-2">Quality Over Quantity</h4>
+                    <p class="text-[#666666] text-[14px] leading-relaxed">We focus on delivering memorable experiences rather than simply moving travelers from one destination to another.</p>
+                </div>
+                <div class="border-l-4 border-brand pl-5 py-2">
+                    <h4 class="font-bold text-darktext text-[15px] uppercase mb-2">Community of Travelers</h4>
+                    <p class="text-[#666666] text-[14px] leading-relaxed">Our trips bring together like-minded people who share a passion for exploration, adventure, and meaningful travel.</p>
+                </div>
+                <div class="border-l-4 border-brand pl-5 py-2 md:col-span-2 lg:col-span-2">
+                    <h4 class="font-bold text-darktext text-[15px] uppercase mb-2">Passion for Exploration</h4>
+                    <p class="text-[#666666] text-[14px] leading-relaxed">The Yatra Vista was built by travelers, for travelers. Every itinerary is crafted with genuine passion and firsthand understanding of what makes a journey truly unforgettable.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Vision -->
+        <div class="bg-cardtheme text-white p-10 text-center rounded-xl shadow-sm relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-brand"></div>
+            <i class="fas fa-binoculars text-brand text-4xl mb-5 opacity-80"></i>
+            <h3 class="text-[22px] font-bold uppercase mb-4">Our Vision</h3>
+            <p class="text-gray-300 leading-relaxed text-[15px] max-w-3xl mx-auto">To become one of India's most trusted and preferred travel brands by delivering exceptional travel experiences, promoting responsible tourism, and inspiring people to explore the incredible diversity of our country.</p>
+            <p class="text-gray-400 text-[14px] mt-4 max-w-2xl mx-auto">We envision a future where every traveler can discover new places with confidence, comfort, safety, and a sense of adventure.</p>
+            <p class="text-brand font-bold text-[15px] mt-6 italic">Explore More • Travel Better • Create Memories for Life</p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-brand text-white px-8 py-3.5 font-bold uppercase hover:bg-branddark transition text-sm tracking-wider rounded-sm inline-block">
+                    Plan Your Journey <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="https://instagram.com/theyatravista" target="_blank" class="bg-white/10 border border-white/20 text-white px-8 py-3.5 font-bold uppercase hover:bg-white/20 transition text-sm tracking-wider rounded-sm inline-block">
+                    <i class="fab fa-instagram mr-2"></i> @theyatravista
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Full Footer -->
+    <footer class="bg-topbar text-[#aaaaaa] pt-16 pb-8 border-t-[4px] border-brand mt-auto">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 mb-8">
+            <div>
+                <img src="BG_removed_logo.PNG" alt="The Yatra Vista" class="h-16 mb-5 bg-white/10 p-1.5 rounded-sm">
+                <p class="text-[14px] mb-4 leading-relaxed">We specialize in creating fully customized travel packages tailored to your budget, group size, and preferred destinations.</p>
+                <p class="text-[13px] font-bold text-white tracking-widest uppercase">UDYAM-UK-13-0010463</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wide mb-5 text-[16px]">Quick Links</h4>
+                <div class="w-10 h-[2px] bg-brand mb-5"></div>
+                <ul class="space-y-3 text-[14px]">
+                    <li><a href="about.html" class="hover:text-brand transition"><i class="fas fa-angle-right text-brand mr-2"></i> About Us</a></li>
+                    <li><a href="treks.html" class="hover:text-brand transition"><i class="fas fa-angle-right text-brand mr-2"></i> All Treks</a></li>
+                    <li><a href="contact.html" class="hover:text-brand transition"><i class="fas fa-angle-right text-brand mr-2"></i> Contact Us</a></li>
+                    <li><a href="policies.html" class="hover:text-brand transition"><i class="fas fa-angle-right text-brand mr-2"></i> Policies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wide mb-5 text-[16px]">Contact Info</h4>
+                <div class="w-10 h-[2px] bg-brand mb-5"></div>
+                <ul class="space-y-4 text-[14px]">
+                    <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-brand text-lg mt-0.5"></i><span>Tiloth Rana Bhawan, Uttarkashi, Uttarakhand, 249193</span></li>
+                    <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-brand text-lg"></i><span>75054 25149 / 86500 72574</span></li>
+                    <li class="flex items-center gap-3"><i class="fas fa-envelope text-brand text-lg"></i><span>theyatravista@gmail.com</span></li>
+                    <li class="flex items-center gap-3"><i class="fab fa-instagram text-brand text-lg"></i><a href="https://instagram.com/theyatravista" target="_blank" class="hover:text-brand transition">@theyatravista</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 border-t border-[#333333] pt-6 text-center text-[13px]">
+            &copy; 2026 The Yatra Vista. All rights reserved. | <a href="policies.html" class="hover:text-brand">Policies</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    </script>
+</body>
+
+</html>
