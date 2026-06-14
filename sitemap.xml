@@ -1,41 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.theyatravista.com/</loc>
+<lastmod>2026-06-14</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
 </url>
 
 <url>
 <loc>https://www.theyatravista.com/treks</loc>
+<lastmod>2026-06-14</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
 </url>
 
 <url>
 <loc>https://www.theyatravista.com/about</loc>
+<lastmod>2026-06-14</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.theyatravista.com/contact</loc>
+<lastmod>2026-06-14</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.theyatravista.com/policies</loc>
+<lastmod>2026-06-14</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.3</priority>
 </url>
 
 <url>
 <loc>https://www.theyatravista.com/hampta-pass</loc>
+<lastmod>2026-06-14</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
 </url>
 
 <url>
 <loc>https://www.theyatravista.com/madhmaheshwar</loc>
+<lastmod>2026-06-14</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
 </url>
 
 <url>
 <loc>https://www.theyatravista.com/valley-of-flowers</loc>
+<lastmod>2026-06-14</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
 </url>
 
 <url>
 <loc>https://www.theyatravista.com/yulla-kanda</loc>
+<lastmod>2026-06-14</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
 </url>
 
 </urlset>
